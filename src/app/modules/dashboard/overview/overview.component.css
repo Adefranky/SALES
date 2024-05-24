@@ -1,0 +1,14 @@
+.overview {
+    padding: 20px;
+  }
+  
+  .metrics {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .metrics mat-card {
+    flex: 1;
+    margin: 10px;
+  }
+  

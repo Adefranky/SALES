@@ -1,0 +1,22 @@
+<div class="overview">
+    <h1>Dashboard Overview</h1>
+    <div class="metrics">
+      <mat-card>
+        <mat-card-title>Collections</mat-card-title>
+        <mat-card-content>{{ collections }}</mat-card-content>
+      </mat-card>
+      <mat-card>
+        <mat-card-title>Sign-ups</mat-card-title>
+        <mat-card-content>{{ signups }}</mat-card-content>
+      </mat-card>
+      <mat-card>
+        <mat-card-title>Total Revenue</mat-card-title>
+        <mat-card-content>{{ totalRevenue | currency }}</mat-card-content>
+      </mat-card>
+      <mat-card>
+        <mat-card-title>Bounced Cheques</mat-card-title>
+        <mat-card-content>{{ bouncedCheques }}</mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  

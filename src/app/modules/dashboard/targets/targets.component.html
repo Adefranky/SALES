@@ -1,0 +1,11 @@
+<div class="targets">
+    <h2>Targets Visualization</h2>
+    <div *ngFor="let product of ['analytics', 'finance', 'timetable']">
+      <h3>Zeraki {{ product | titlecase }}</h3>
+      <canvas baseChart
+              [data]="[signupTargets[product].achieved, signupTargets[product].target - signupTargets[product].achieved]"
+              [labels]="['Achieved', 'Remaining']"
+              [chartType]="'pie'"></canvas>
+    </div>
+  </div>
+  

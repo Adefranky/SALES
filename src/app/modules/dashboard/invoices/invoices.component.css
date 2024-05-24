@@ -1,0 +1,8 @@
+.invoices {
+    padding: 20px;
+  }
+  
+  .invoices mat-table {
+    width: 100%;
+  }
+  

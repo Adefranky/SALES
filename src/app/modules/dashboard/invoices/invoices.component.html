@@ -1,0 +1,28 @@
+<div class="invoices">
+    <h2>Upcoming Invoices</h2>
+    <mat-table [dataSource]="upcomingInvoices" class="mat-elevation-z8">
+      <ng-container matColumnDef="school">
+        <mat-header-cell *matHeaderCellDef> School </mat-header-cell>
+        <mat-cell *matCellDef="let invoice"> {{invoice.school}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="amount">
+        <mat-header-cell *matHeaderCellDef> Amount </mat-header-cell>
+        <mat-cell *matCellDef="let invoice"> {{invoice.amount | currency}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="dueDate">
+        <mat-header-cell *matHeaderCellDef> Due Date </mat-header-cell>
+        <mat-cell *matCellDef="let invoice"> {{invoice.dueDate | date}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="status">
+        <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+        <mat-cell *matCellDef="let invoice"> {{invoice.status}} </mat-cell>
+      </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="['school', 'amount', 'dueDate', 'status']"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: ['school', 'amount', 'dueDate', 'status'];"></mat-row>
+    </mat-table>
+  </div>
+  

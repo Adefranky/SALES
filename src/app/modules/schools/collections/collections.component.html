@@ -1,0 +1,24 @@
+<div class="collections">
+    <h2>Collections</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Invoice Number</th>
+          <th>Collection Number</th>
+          <th>Date</th>
+          <th>Status</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let collection of collections">
+          <td>{{ collection.invoiceNumber }}</td>
+          <td>{{ collection.collectionNumber }}</td>
+          <td>{{ collection.date | date }}</td>
+          <td>{{ collection.status }}</td>
+          <td>{{ collection.amount | currency }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
